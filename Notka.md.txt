@@ -1,0 +1,9 @@
+# Kalkulator roboczogodzin
+
+1. Dodawanie nowych zleceñ lub prac dla danej firmy
+2. Program oblicza, czy mo¿liwe jest wykonanie zlecenia w podanym przez zleceniodawcê terminie
+3. Je¿eli:
+..* tak, program zapisuje zlecenie w bazie danych
+..* nie, program proponuje u¿ytkownikowi podanie innego terminu lub edycjê innych
+4. Wyœwietlanie zapisanych zleceñ w formie kalendarza
+
