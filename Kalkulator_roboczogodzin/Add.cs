@@ -17,10 +17,28 @@ namespace Kalkulator_roboczogodzin
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void return_button_Click(object sender, EventArgs e)
         {
-            
-            
+            this.Visible = false;
+            Home Return = new Kalkulator_roboczogodzin.Home();
+            Return.ShowDialog();
+            this.Close();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

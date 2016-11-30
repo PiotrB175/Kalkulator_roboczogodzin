@@ -10,15 +10,23 @@ using System.Windows.Forms;
 
 namespace Kalkulator_roboczogodzin
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
         }
 
         private void Exit_button_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void add_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Add Add = new Kalkulator_roboczogodzin.Add();
+            Add.ShowDialog();
             this.Close();
         }
     }
