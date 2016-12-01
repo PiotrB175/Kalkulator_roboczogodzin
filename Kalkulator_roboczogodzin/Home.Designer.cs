@@ -34,7 +34,7 @@
             // 
             // Exit_button
             // 
-            this.Exit_button.Location = new System.Drawing.Point(560, 403);
+            this.Exit_button.Location = new System.Drawing.Point(12, 283);
             this.Exit_button.Name = "Exit_button";
             this.Exit_button.Size = new System.Drawing.Size(160, 40);
             this.Exit_button.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 456);
+            this.ClientSize = new System.Drawing.Size(331, 335);
             this.Controls.Add(this.add_button);
             this.Controls.Add(this.Exit_button);
             this.Name = "Home";
