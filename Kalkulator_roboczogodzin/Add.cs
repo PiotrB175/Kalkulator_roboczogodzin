@@ -38,6 +38,13 @@ namespace Kalkulator_roboczogodzin
 
         private void Add_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'appData.Dodaj_zlecenie' table. You can move, or remove it, as needed.
+            this.dodaj_zlecenieTableAdapter.Fill(this.appData.Dodaj_zlecenie);
+
+        }
+
+        private void save_button_Click(object sender, EventArgs e)
+        {
 
         }
     }

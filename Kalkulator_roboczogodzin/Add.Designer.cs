@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.return_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,14 +37,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_zleceniodawca = new System.Windows.Forms.TextBox();
+            this.txt_numer_zamowienia = new System.Windows.Forms.TextBox();
+            this.txt_nazwa = new System.Windows.Forms.TextBox();
+            this.txt_opis = new System.Windows.Forms.TextBox();
+            this.txt_data_realizacji_zleceniodawca = new System.Windows.Forms.TextBox();
+            this.txt_przewidywany_czas_pracy = new System.Windows.Forms.TextBox();
+            this.txt_data_realizacji_finalna = new System.Windows.Forms.TextBox();
+            this.save_button = new System.Windows.Forms.Button();
+            this.appData = new Kalkulator_roboczogodzin.AppData();
+            this.dodajzlecenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dodaj_zlecenieTableAdapter = new Kalkulator_roboczogodzin.AppDataTableAdapters.Dodaj_zlecenieTableAdapter();
+            this.dodajzlecenieBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // return_button
@@ -120,78 +128,105 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Data realizacji ( finalna)";
             // 
-            // textBox1
+            // txt_zleceniodawca
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.txt_zleceniodawca.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dodajzlecenieBindingSource, "Zleceniodawca", true));
+            this.txt_zleceniodawca.Location = new System.Drawing.Point(208, 12);
+            this.txt_zleceniodawca.Name = "txt_zleceniodawca";
+            this.txt_zleceniodawca.Size = new System.Drawing.Size(100, 20);
+            this.txt_zleceniodawca.TabIndex = 8;
             // 
-            // textBox2
+            // txt_numer_zamowienia
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txt_numer_zamowienia.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dodajzlecenieBindingSource, "Numer zamówienia (zleceniodawcy)", true));
+            this.txt_numer_zamowienia.Location = new System.Drawing.Point(208, 52);
+            this.txt_numer_zamowienia.Name = "txt_numer_zamowienia";
+            this.txt_numer_zamowienia.Size = new System.Drawing.Size(100, 20);
+            this.txt_numer_zamowienia.TabIndex = 9;
             // 
-            // textBox3
+            // txt_nazwa
             // 
-            this.textBox3.Location = new System.Drawing.Point(208, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.txt_nazwa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dodajzlecenieBindingSource, "Nazwa", true));
+            this.txt_nazwa.Location = new System.Drawing.Point(208, 92);
+            this.txt_nazwa.Name = "txt_nazwa";
+            this.txt_nazwa.Size = new System.Drawing.Size(100, 20);
+            this.txt_nazwa.TabIndex = 10;
             // 
-            // textBox4
+            // txt_opis
             // 
-            this.textBox4.Location = new System.Drawing.Point(208, 132);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 11;
+            this.txt_opis.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dodajzlecenieBindingSource, "Opis", true));
+            this.txt_opis.Location = new System.Drawing.Point(208, 132);
+            this.txt_opis.Name = "txt_opis";
+            this.txt_opis.Size = new System.Drawing.Size(100, 20);
+            this.txt_opis.TabIndex = 11;
             // 
-            // textBox5
+            // txt_data_realizacji_zleceniodawca
             // 
-            this.textBox5.Location = new System.Drawing.Point(208, 172);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 12;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txt_data_realizacji_zleceniodawca.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dodajzlecenieBindingSource, "Data realizacji (klient)", true));
+            this.txt_data_realizacji_zleceniodawca.Location = new System.Drawing.Point(208, 172);
+            this.txt_data_realizacji_zleceniodawca.Name = "txt_data_realizacji_zleceniodawca";
+            this.txt_data_realizacji_zleceniodawca.Size = new System.Drawing.Size(100, 20);
+            this.txt_data_realizacji_zleceniodawca.TabIndex = 12;
+            this.txt_data_realizacji_zleceniodawca.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox6
+            // txt_przewidywany_czas_pracy
             // 
-            this.textBox6.Location = new System.Drawing.Point(208, 212);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 13;
+            this.txt_przewidywany_czas_pracy.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dodajzlecenieBindingSource, "Przewidywany czas pracy", true));
+            this.txt_przewidywany_czas_pracy.Location = new System.Drawing.Point(208, 212);
+            this.txt_przewidywany_czas_pracy.Name = "txt_przewidywany_czas_pracy";
+            this.txt_przewidywany_czas_pracy.Size = new System.Drawing.Size(100, 20);
+            this.txt_przewidywany_czas_pracy.TabIndex = 13;
             // 
-            // textBox7
+            // txt_data_realizacji_finalna
             // 
-            this.textBox7.Location = new System.Drawing.Point(208, 252);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 14;
+            this.txt_data_realizacji_finalna.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dodajzlecenieBindingSource, "Data realizacji (finalna)", true));
+            this.txt_data_realizacji_finalna.Location = new System.Drawing.Point(208, 252);
+            this.txt_data_realizacji_finalna.Name = "txt_data_realizacji_finalna";
+            this.txt_data_realizacji_finalna.Size = new System.Drawing.Size(100, 20);
+            this.txt_data_realizacji_finalna.TabIndex = 14;
             // 
-            // button1
+            // save_button
             // 
-            this.button1.Location = new System.Drawing.Point(208, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 20);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Zapisz";
-            this.button1.UseVisualStyleBackColor = true;
+            this.save_button.Location = new System.Drawing.Point(208, 325);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(100, 20);
+            this.save_button.TabIndex = 15;
+            this.save_button.Text = "Zapisz";
+            this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "AppData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dodajzlecenieBindingSource
+            // 
+            this.dodajzlecenieBindingSource.DataMember = "Dodaj_zlecenie";
+            this.dodajzlecenieBindingSource.DataSource = this.appData;
+            // 
+            // dodaj_zlecenieTableAdapter
+            // 
+            this.dodaj_zlecenieTableAdapter.ClearBeforeFill = true;
+            // 
+            // dodajzlecenieBindingSource1
+            // 
+            this.dodajzlecenieBindingSource1.DataMember = "Dodaj_zlecenie";
+            this.dodajzlecenieBindingSource1.DataSource = this.appData;
             // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 391);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.save_button);
+            this.Controls.Add(this.txt_data_realizacji_finalna);
+            this.Controls.Add(this.txt_przewidywany_czas_pracy);
+            this.Controls.Add(this.txt_data_realizacji_zleceniodawca);
+            this.Controls.Add(this.txt_opis);
+            this.Controls.Add(this.txt_nazwa);
+            this.Controls.Add(this.txt_numer_zamowienia);
+            this.Controls.Add(this.txt_zleceniodawca);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -203,6 +238,9 @@
             this.Name = "Add";
             this.Text = "Dodaj";
             this.Load += new System.EventHandler(this.Add_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,13 +256,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_zleceniodawca;
+        private System.Windows.Forms.TextBox txt_numer_zamowienia;
+        private System.Windows.Forms.TextBox txt_nazwa;
+        private System.Windows.Forms.TextBox txt_opis;
+        private System.Windows.Forms.TextBox txt_data_realizacji_zleceniodawca;
+        private System.Windows.Forms.TextBox txt_przewidywany_czas_pracy;
+        private System.Windows.Forms.TextBox txt_data_realizacji_finalna;
+        private System.Windows.Forms.Button save_button;
+        private AppData appData;
+        private System.Windows.Forms.BindingSource dodajzlecenieBindingSource;
+        private AppDataTableAdapters.Dodaj_zlecenieTableAdapter dodaj_zlecenieTableAdapter;
+        private System.Windows.Forms.BindingSource dodajzlecenieBindingSource1;
     }
 }
