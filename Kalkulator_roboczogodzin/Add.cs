@@ -28,22 +28,11 @@ namespace Kalkulator_roboczogodzin
             this.Close();
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Add_Load(object sender, EventArgs e)
         {
 
         }
-
+        
         private void add_button_Click(object sender, EventArgs e)
         {
             try
@@ -54,7 +43,7 @@ namespace Kalkulator_roboczogodzin
                 command.CommandText = "insert into Dodaj_zlecenie (Zleceniodawca, NumerKatalogowy, Nazwa, Opis, DataRealizacjiKlient, PrzewidywanyCzasPracy, DataRealizacjiFinalna) values ('"+ textBox1.Text + "','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+textBox6.Text+"','"+textBox7.Text+"')";
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Dodano");
+                MessageBox.Show("Dodano pomyślnie");
             }
             catch (Exception ex)
             {

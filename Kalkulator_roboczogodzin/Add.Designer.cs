@@ -48,7 +48,7 @@
             // 
             // return_button
             // 
-            this.return_button.Location = new System.Drawing.Point(208, 351);
+            this.return_button.Location = new System.Drawing.Point(208, 320);
             this.return_button.Name = "return_button";
             this.return_button.Size = new System.Drawing.Size(100, 20);
             this.return_button.TabIndex = 0;
@@ -64,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Zleceniodawca";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -154,7 +153,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 12;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -172,7 +170,7 @@
             // 
             // add_button
             // 
-            this.add_button.Location = new System.Drawing.Point(208, 325);
+            this.add_button.Location = new System.Drawing.Point(208, 294);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(100, 20);
             this.add_button.TabIndex = 15;
