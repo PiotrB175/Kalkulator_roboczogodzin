@@ -64,6 +64,7 @@
             this.edit_button.TabIndex = 2;
             this.edit_button.Text = "Edytuj";
             this.edit_button.UseVisualStyleBackColor = true;
+            this.edit_button.Click += new System.EventHandler(this.edit_button_Click);
             // 
             // delete_button
             // 
@@ -73,6 +74,7 @@
             this.delete_button.TabIndex = 3;
             this.delete_button.Text = "Usuń";
             this.delete_button.UseVisualStyleBackColor = true;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
             // show_button
             // 
@@ -82,6 +84,7 @@
             this.show_button.TabIndex = 4;
             this.show_button.Text = "Podgląd";
             this.show_button.UseVisualStyleBackColor = true;
+            this.show_button.Click += new System.EventHandler(this.show_button_Click);
             // 
             // Home
             // 

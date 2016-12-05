@@ -29,5 +29,29 @@ namespace Kalkulator_roboczogodzin
             Add.ShowDialog();
             this.Close();
         }
+
+        private void edit_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Edit Edit = new Kalkulator_roboczogodzin.Edit();
+            Edit.ShowDialog();
+            this.Close();
+        }
+
+        private void delete_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Delete Delete = new Kalkulator_roboczogodzin.Delete();
+            Delete.ShowDialog();
+            this.Close();
+        }
+
+        private void show_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Show Show = new Kalkulator_roboczogodzin.Show();
+            Show.ShowDialog();
+            this.Close();
+        }
     }
 }

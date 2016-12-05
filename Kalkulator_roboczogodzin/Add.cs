@@ -14,7 +14,6 @@ namespace Kalkulator_roboczogodzin
 
     public partial class Add : Form
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Studia UWM\Programowanie\PROGRAMY W C#\Kalkulator_roboczogodzin\Baza_zlecen.accdb");
         public Add()
         {
             InitializeComponent();
@@ -35,21 +34,7 @@ namespace Kalkulator_roboczogodzin
         
         private void add_button_Click(object sender, EventArgs e)
         {
-            try
-            {
-                con.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = con;
-                command.CommandText = "insert into Dodaj_zlecenie (Zleceniodawca, NumerKatalogowy, Nazwa, Opis, DataRealizacjiKlient, PrzewidywanyCzasPracy, DataRealizacjiFinalna) values ('"+ textBox1.Text + "','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+textBox6.Text+"','"+textBox7.Text+"')";
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Dodano pomyślnie");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex);
-            }
-
+            
         }
     }
 }

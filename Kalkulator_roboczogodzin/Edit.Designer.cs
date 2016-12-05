@@ -28,11 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.return_button = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // return_button
+            // 
+            this.return_button.Location = new System.Drawing.Point(197, 226);
+            this.return_button.Name = "return_button";
+            this.return_button.Size = new System.Drawing.Size(75, 23);
+            this.return_button.TabIndex = 0;
+            this.return_button.Text = "Powrót";
+            this.return_button.UseVisualStyleBackColor = true;
+            // 
+            // Edit
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.return_button);
+            this.Name = "Edit";
             this.Text = "Edit";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button return_button;
     }
 }
