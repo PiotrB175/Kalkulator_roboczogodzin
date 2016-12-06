@@ -39,6 +39,7 @@
             this.return_button.TabIndex = 0;
             this.return_button.Text = "Powrót";
             this.return_button.UseVisualStyleBackColor = true;
+            this.return_button.Click += new System.EventHandler(this.return_button_Click);
             // 
             // Edit
             // 

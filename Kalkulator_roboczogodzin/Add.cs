@@ -34,7 +34,29 @@ namespace Kalkulator_roboczogodzin
         
         private void add_button_Click(object sender, EventArgs e)
         {
-            
+            string zleceniodawca = textBox1.Text;
+            string numerKatalogowy = textBox2.Text;
+            string nazwa = textBox3.Text;
+            string opis = textBox4.Text;
+            string dataRealizacjiKlient = textBox5.Text;
+            string przewidywanyCzasPracy = textBox6.Text;
+            string dataRealizacjiFinalna = textBox7.Text;
+            using (BazaZlecenModel db = new BazaZlecenModel())
+            {
+                Dodaj_zlecenie dodaj = new Dodaj_zlecenie()
+                {
+                    Zleceniodawca = zleceniodawca,
+                    NumerKatalogowy = numerKatalogowy,
+                    Nazwa = nazwa,
+                    Opis = opis,
+                    DataRealizacjiKlient = dataRealizacjiKlient,
+                    PrzewidywanyCzasPracy = przewidywanyCzasPracy,
+                    DataRealizacjiFinalna = dataRealizacjiFinalna
+                };
+                db.Dodaj_zlecenie.Add(dodaj);
+                db.SaveChanges();
+                MessageBox.Show("Dodano pomyślnie");
+            }
         }
     }
 }
