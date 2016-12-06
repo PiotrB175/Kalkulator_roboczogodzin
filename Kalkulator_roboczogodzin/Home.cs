@@ -53,5 +53,10 @@ namespace Kalkulator_roboczogodzin
             Show.ShowDialog();
             this.Close();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
