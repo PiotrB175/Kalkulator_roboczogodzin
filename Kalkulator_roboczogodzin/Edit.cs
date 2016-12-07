@@ -37,5 +37,15 @@ namespace Kalkulator_roboczogodzin
             dataGridView1.Refresh();
 
         }
+
+        private void delete_button_Click(object sender, EventArgs e)
+        {
+            var delete = (int)dataGridView1.Rows[0].Cells[0].Value;
+            var bz = new BazaZlecenModel();
+            var zlecenie = bz.Dodaj_zlecenie.First(c => c.Id == delete);
+            bz.Dodaj_zlecenie.Remove(zlecenie);
+            bz.SaveChanges();
+            dataGridView1.DataSource = bz.Dodaj_zlecenie.ToList();
+        }
     }
 }
