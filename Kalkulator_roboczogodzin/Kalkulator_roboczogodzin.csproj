@@ -78,6 +78,11 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Baza_zlecenDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Baza_zlecenDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +155,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Entity.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Baza_zlecenDataSet.xsc">
+      <DependentUpon>Baza_zlecenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Baza_zlecenDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Baza_zlecenDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Baza_zlecenDataSet.xss">
+      <DependentUpon>Baza_zlecenDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Entity.edmx.diagram">
       <DependentUpon>Entity.edmx</DependentUpon>
     </None>
