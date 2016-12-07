@@ -34,6 +34,7 @@ namespace Kalkulator_roboczogodzin
         
         private void add_button_Click(object sender, EventArgs e)
         {
+            //dodawanie rekordów do bazy
             string zleceniodawca = textBox1.Text;
             string numerKatalogowy = textBox2.Text;
             string nazwa = textBox3.Text;

@@ -38,14 +38,6 @@ namespace Kalkulator_roboczogodzin
             this.Close();
         }
 
-        private void delete_button_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            Delete Delete = new Kalkulator_roboczogodzin.Delete();
-            Delete.ShowDialog();
-            this.Close();
-        }
-
         private void show_button_Click(object sender, EventArgs e)
         {
             this.Visible = false;

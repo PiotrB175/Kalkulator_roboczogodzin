@@ -29,12 +29,17 @@ namespace Kalkulator_roboczogodzin
         {
             // TODO: This line of code loads data into the 'baza_zlecenDataSet.Dodaj_zlecenie' table. You can move, or remove it, as needed.
             this.dodaj_zlecenieTableAdapter.Fill(this.baza_zlecenDataSet.Dodaj_zlecenie);
-
+            //wyświetlanie rekordów z bazy
             var context = new BazaZlecenModel();
             BindingSource bi = new BindingSource();
             bi.DataSource = context.Dodaj_zlecenie.ToList();
             dataGridView1.DataSource = bi;
             dataGridView1.Refresh();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

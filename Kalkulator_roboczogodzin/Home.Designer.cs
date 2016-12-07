@@ -31,7 +31,6 @@
             this.Exit_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
             this.edit_button = new System.Windows.Forms.Button();
-            this.delete_button = new System.Windows.Forms.Button();
             this.show_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -66,19 +65,9 @@
             this.edit_button.UseVisualStyleBackColor = true;
             this.edit_button.Click += new System.EventHandler(this.edit_button_Click);
             // 
-            // delete_button
-            // 
-            this.delete_button.Location = new System.Drawing.Point(12, 104);
-            this.delete_button.Name = "delete_button";
-            this.delete_button.Size = new System.Drawing.Size(160, 40);
-            this.delete_button.TabIndex = 3;
-            this.delete_button.Text = "Usuń";
-            this.delete_button.UseVisualStyleBackColor = true;
-            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
-            // 
             // show_button
             // 
-            this.show_button.Location = new System.Drawing.Point(12, 150);
+            this.show_button.Location = new System.Drawing.Point(12, 104);
             this.show_button.Name = "show_button";
             this.show_button.Size = new System.Drawing.Size(160, 40);
             this.show_button.TabIndex = 4;
@@ -92,7 +81,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 335);
             this.Controls.Add(this.show_button);
-            this.Controls.Add(this.delete_button);
             this.Controls.Add(this.edit_button);
             this.Controls.Add(this.add_button);
             this.Controls.Add(this.Exit_button);
@@ -108,7 +96,6 @@
         private System.Windows.Forms.Button Exit_button;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.Button edit_button;
-        private System.Windows.Forms.Button delete_button;
         private System.Windows.Forms.Button show_button;
     }
 }
