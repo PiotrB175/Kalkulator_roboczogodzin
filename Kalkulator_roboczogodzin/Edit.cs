@@ -27,25 +27,34 @@ namespace Kalkulator_roboczogodzin
 
         private void Edit_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baza_zlecenDataSet.Dodaj_zlecenie' table. You can move, or remove it, as needed.
-            this.dodaj_zlecenieTableAdapter.Fill(this.baza_zlecenDataSet.Dodaj_zlecenie);
-            //wyświetlanie rekordów z bazy
-            var context = new BazaZlecenModel();
-            BindingSource bi = new BindingSource();
-            bi.DataSource = context.Dodaj_zlecenie.ToList();
-            dataGridView1.DataSource = bi;
-            dataGridView1.Refresh();
-
+            UpdateData();
+        }
+        private void UpdateData()
+        {
+            using (Baza_zlecenEntities db = new Baza_zlecenEntities())
+            {
+                dataGridView1.DataSource = db.Dodaj_zlecenie.ToList();
+            }
         }
 
         private void delete_button_Click(object sender, EventArgs e)
         {
-            var delete = (int)dataGridView1.Rows[0].Cells[0].Value;
-            var bz = new BazaZlecenModel();
-            var zlecenie = bz.Dodaj_zlecenie.First(c => c.Id == delete);
-            bz.Dodaj_zlecenie.Remove(zlecenie);
-            bz.SaveChanges();
-            dataGridView1.DataSource = bz.Dodaj_zlecenie.ToList();
+            int delete = (int)dataGridView1.Rows[0].Cells[0].Value;
+            DeleteData(delete);
+            MessageBox.Show("Rekord został usunięty");
+            UpdateData();
+
+
+        }
+        private void DeleteData(int id)
+        {
+            using (Baza_zlecenEntities db = new Baza_zlecenEntities())
+            {
+                Dodaj_zlecenie row = db.Dodaj_zlecenie.First(r => r.Id == id);
+                db.Dodaj_zlecenie.Remove(row);
+                db.SaveChanges();
+
+            }
         }
     }
 }

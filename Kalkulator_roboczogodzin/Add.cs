@@ -42,7 +42,7 @@ namespace Kalkulator_roboczogodzin
             string dataRealizacjiKlient = textBox5.Text;
             string przewidywanyCzasPracy = textBox6.Text;
             string dataRealizacjiFinalna = textBox7.Text;
-            using (BazaZlecenModel db = new BazaZlecenModel())
+            using (Baza_zlecenEntities db = new Baza_zlecenEntities())
             {
                 Dodaj_zlecenie dodaj = new Dodaj_zlecenie()
                 {

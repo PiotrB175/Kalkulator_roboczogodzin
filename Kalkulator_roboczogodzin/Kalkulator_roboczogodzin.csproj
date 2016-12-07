@@ -78,13 +78,28 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Baza_entity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Baza_entity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Baza_entity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Baza_entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Baza_entity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Baza_entity.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Baza_zlecenDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Baza_zlecenDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dodaj_zlecenie.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
+      <DependentUpon>Baza_entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Edit.cs">
       <SubType>Form</SubType>
@@ -146,6 +161,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Entity.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Baza_entity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Baza_entity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Baza_entity.edmx.diagram">
+      <DependentUpon>Baza_entity.edmx</DependentUpon>
+    </None>
     <None Include="Baza_zlecenDataSet.xsc">
       <DependentUpon>Baza_zlecenDataSet.xsd</DependentUpon>
     </None>
@@ -190,6 +212,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Baza_entity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Baza_entity.edmx</DependentUpon>
+      <LastGenOutput>Baza_entity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Baza_entity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Baza_entity.edmx</DependentUpon>
+      <LastGenOutput>Baza_entity.cs</LastGenOutput>
+    </Content>
     <Content Include="Baza_zlecen.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -4,44 +4,43 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Baza_zlecen_model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Baza_zlecen_model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Dodaj_zlecenie">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Zleceniodawca" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="NumerKatalogowy" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Nazwa" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Opis" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="PrzewidywanyCzasPracy" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="DataRealizacjiKlient" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="DataRealizacjiFinalna" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Zleceniodawca" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NumerKatalogowy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Opis" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrzewidywanyCzasPracy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataRealizacjiKlient" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataRealizacjiFinalna" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityContainer Name="Baza_zlecen_modelStoreContainer">
           <EntitySet Name="Dodaj_zlecenie" EntityType="Self.Dodaj_zlecenie" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Baza_zlecen_model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BazaZlecenModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dodaj_zlecenie" EntityType="Baza_zlecen_model.Dodaj_zlecenie" />
+        </EntityContainer>
         <EntityType Name="Dodaj_zlecenie">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Zleceniodawca" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="NumerKatalogowy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Nazwa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Opis" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="PrzewidywanyCzasPracy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="DataRealizacjiKlient" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="DataRealizacjiFinalna" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Zleceniodawca" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NumerKatalogowy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nazwa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Opis" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrzewidywanyCzasPracy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataRealizacjiKlient" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataRealizacjiFinalna" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="BazaZlecenModel" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Dodaj_zlecenie" EntityType="Self.Dodaj_zlecenie" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -51,14 +50,14 @@
           <EntitySetMapping Name="Dodaj_zlecenie">
             <EntityTypeMapping TypeName="Baza_zlecen_model.Dodaj_zlecenie">
               <MappingFragment StoreEntitySet="Dodaj_zlecenie">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Zleceniodawca" ColumnName="Zleceniodawca" />
-                <ScalarProperty Name="NumerKatalogowy" ColumnName="NumerKatalogowy" />
-                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
-                <ScalarProperty Name="Opis" ColumnName="Opis" />
-                <ScalarProperty Name="PrzewidywanyCzasPracy" ColumnName="PrzewidywanyCzasPracy" />
-                <ScalarProperty Name="DataRealizacjiKlient" ColumnName="DataRealizacjiKlient" />
                 <ScalarProperty Name="DataRealizacjiFinalna" ColumnName="DataRealizacjiFinalna" />
+                <ScalarProperty Name="DataRealizacjiKlient" ColumnName="DataRealizacjiKlient" />
+                <ScalarProperty Name="PrzewidywanyCzasPracy" ColumnName="PrzewidywanyCzasPracy" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="NumerKatalogowy" ColumnName="NumerKatalogowy" />
+                <ScalarProperty Name="Zleceniodawca" ColumnName="Zleceniodawca" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

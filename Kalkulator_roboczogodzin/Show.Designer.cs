@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.return_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.baza_zlecenDataSet = new Kalkulator_roboczogodzin.Baza_zlecenDataSet();
-            this.dodajzlecenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dodaj_zlecenieTableAdapter = new Kalkulator_roboczogodzin.Baza_zlecenDataSetTableAdapters.Dodaj_zlecenieTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zleceniodawcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numerKatalogowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,10 +39,12 @@
             this.przewidywanyCzasPracyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataRealizacjiKlientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataRealizacjiFinalnaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dodajzlecenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baza_zlecenDataSet = new Kalkulator_roboczogodzin.Baza_zlecenDataSet();
+            this.dodaj_zlecenieTableAdapter = new Kalkulator_roboczogodzin.Baza_zlecenDataSetTableAdapters.Dodaj_zlecenieTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baza_zlecenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baza_zlecenDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // return_button
@@ -78,20 +77,6 @@
             this.dataGridView1.RowHeadersWidth = 44;
             this.dataGridView1.Size = new System.Drawing.Size(836, 349);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // baza_zlecenDataSet
-            // 
-            this.baza_zlecenDataSet.DataSetName = "Baza_zlecenDataSet";
-            this.baza_zlecenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dodajzlecenieBindingSource
-            // 
-            this.dodajzlecenieBindingSource.DataMember = "Dodaj_zlecenie";
-            this.dodajzlecenieBindingSource.DataSource = this.baza_zlecenDataSet;
-            // 
-            // dodaj_zlecenieTableAdapter
-            // 
-            this.dodaj_zlecenieTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -150,30 +135,33 @@
             this.dataRealizacjiFinalnaDataGridViewTextBoxColumn.Name = "dataRealizacjiFinalnaDataGridViewTextBoxColumn";
             this.dataRealizacjiFinalnaDataGridViewTextBoxColumn.Width = 134;
             // 
-            // button1
+            // dodajzlecenieBindingSource
             // 
-            this.button1.Location = new System.Drawing.Point(925, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Usuń";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dodajzlecenieBindingSource.DataMember = "Dodaj_zlecenie";
+            this.dodajzlecenieBindingSource.DataSource = this.baza_zlecenDataSet;
+            // 
+            // baza_zlecenDataSet
+            // 
+            this.baza_zlecenDataSet.DataSetName = "Baza_zlecenDataSet";
+            this.baza_zlecenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dodaj_zlecenieTableAdapter
+            // 
+            this.dodaj_zlecenieTableAdapter.ClearBeforeFill = true;
             // 
             // Show
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 416);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.return_button);
             this.Name = "Show";
             this.Text = "Show";
             this.Load += new System.EventHandler(this.Show_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baza_zlecenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baza_zlecenDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,6 +181,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn przewidywanyCzasPracyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataRealizacjiKlientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataRealizacjiFinalnaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
     }
 }
