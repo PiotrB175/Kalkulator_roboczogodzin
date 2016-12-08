@@ -97,18 +97,18 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(15, 175);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 13);
+            this.label5.Size = new System.Drawing.Size(128, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Data realizacji (zleceniodawca)";
+            this.label5.Text = "Przewidywany czas pracy";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(15, 215);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 13);
+            this.label6.Size = new System.Drawing.Size(107, 13);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Przewidywany czas pracy";
+            this.label6.Text = "Data realizacji (klient)";
             // 
             // label7
             // 

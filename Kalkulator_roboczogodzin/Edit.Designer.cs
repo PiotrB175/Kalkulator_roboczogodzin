@@ -43,6 +43,7 @@
             this.dodajzlecenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baza_zlecenDataSet = new Kalkulator_roboczogodzin.Baza_zlecenDataSet();
             this.dodaj_zlecenieTableAdapter = new Kalkulator_roboczogodzin.Baza_zlecenDataSetTableAdapters.Dodaj_zlecenieTableAdapter();
+            this.overwrite_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza_zlecenDataSet)).BeginInit();
@@ -160,11 +161,22 @@
             // 
             this.dodaj_zlecenieTableAdapter.ClearBeforeFill = true;
             // 
+            // overwrite_button
+            // 
+            this.overwrite_button.Location = new System.Drawing.Point(883, 285);
+            this.overwrite_button.Name = "overwrite_button";
+            this.overwrite_button.Size = new System.Drawing.Size(75, 23);
+            this.overwrite_button.TabIndex = 3;
+            this.overwrite_button.Text = "Nadpisz";
+            this.overwrite_button.UseVisualStyleBackColor = true;
+            this.overwrite_button.Click += new System.EventHandler(this.overwrite_button_Click);
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 378);
+            this.Controls.Add(this.overwrite_button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.delete_button);
             this.Controls.Add(this.return_button);
@@ -194,5 +206,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn przewidywanyCzasPracyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataRealizacjiKlientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataRealizacjiFinalnaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button overwrite_button;
     }
 }
