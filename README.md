@@ -5,5 +5,5 @@
 3. Jeżeli
   * tak, program zapisuje zlecenie w bazie danych
   * nie, program proponuje użytkownikowi podanie innego terminu lub edycję innych
-4. Wyświetlanie zapisanych zleceń w formie kalendarza
-
+4. Wyświetlanie zapisanych zleceń 
+5. Usuwanie, edytowanie i filtrowanie danych zleceń
