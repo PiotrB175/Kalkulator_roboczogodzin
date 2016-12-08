@@ -223,10 +223,10 @@
       <LastGenOutput>Baza_entity.cs</LastGenOutput>
     </Content>
     <Content Include="Baza_zlecen.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Baza_zlecen_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Baza_zlecen.mdf</DependentUpon>
     </Content>
     <Content Include="Entity.Context.tt">

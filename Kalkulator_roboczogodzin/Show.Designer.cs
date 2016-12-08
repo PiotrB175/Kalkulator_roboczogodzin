@@ -72,7 +72,7 @@
             this.dataRealizacjiKlientDataGridViewTextBoxColumn,
             this.dataRealizacjiFinalnaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dodajzlecenieBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 44;
             this.dataGridView1.Size = new System.Drawing.Size(836, 349);
