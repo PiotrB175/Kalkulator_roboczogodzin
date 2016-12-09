@@ -42,6 +42,8 @@
             this.dodajzlecenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baza_zlecenDataSet = new Kalkulator_roboczogodzin.Baza_zlecenDataSet();
             this.dodaj_zlecenieTableAdapter = new Kalkulator_roboczogodzin.Baza_zlecenDataSetTableAdapters.Dodaj_zlecenieTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza_zlecenDataSet)).BeginInit();
@@ -149,11 +151,30 @@
             // 
             this.dodaj_zlecenieTableAdapter.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(854, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Szukaj zleceniodawcy";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1026, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(146, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Show
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 416);
+            this.ClientSize = new System.Drawing.Size(1204, 538);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.return_button);
             this.Name = "Show";
@@ -163,6 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dodajzlecenieBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza_zlecenDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -181,5 +203,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn przewidywanyCzasPracyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataRealizacjiKlientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataRealizacjiFinalnaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

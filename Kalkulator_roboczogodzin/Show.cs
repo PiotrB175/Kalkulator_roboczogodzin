@@ -27,14 +27,30 @@ namespace Kalkulator_roboczogodzin
 
         private void Show_Load(object sender, EventArgs e)
         {
-            ShowData();
+            ShowData(null);
         }
-        private void ShowData()
+        private void ShowData(List<Dodaj_zlecenie> sd)
+        {
+            if(sd != null)
+            {
+                dataGridView1.DataSource = sd;
+            }
+            else 
+            {
+                using (Baza_zlecenEntities db = new Baza_zlecenEntities())
+                {
+                    dataGridView1.DataSource = db.Dodaj_zlecenie.ToList();
+                }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
             using (Baza_zlecenEntities db = new Baza_zlecenEntities())
             {
-                dataGridView1.DataSource = db.Dodaj_zlecenie.ToList();
+                this.ShowData(db.Dodaj_zlecenie.Where(dz => dz.Zleceniodawca.Contains( textBox1.Text)).ToList());
             }
+
         }
     }
 }
