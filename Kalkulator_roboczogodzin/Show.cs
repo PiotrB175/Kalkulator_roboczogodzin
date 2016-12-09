@@ -48,7 +48,7 @@ namespace Kalkulator_roboczogodzin
         {
             using (Baza_zlecenEntities db = new Baza_zlecenEntities())
             {
-                this.ShowData(db.Dodaj_zlecenie.Where(dz => dz.Zleceniodawca.Contains( textBox1.Text)).ToList());
+                this.ShowData(db.Dodaj_zlecenie.Where(dz => dz.Zleceniodawca.Contains( textBox2.Text)).Where(dz => dz.NumerKatalogowy.Contains(textBox3.Text)).Where(dz => dz.Nazwa.Contains(textBox4.Text)).Where(dz => dz.Opis.Contains(textBox5.Text)).Where(dz => dz.PrzewidywanyCzasPracy.Contains(textBox6.Text)).Where(dz => dz.DataRealizacjiKlient.Contains(textBox7.Text)).Where(dz => dz.DataRealizacjiFinalna.Contains(textBox8.Text)).ToList());
             }
 
         }
