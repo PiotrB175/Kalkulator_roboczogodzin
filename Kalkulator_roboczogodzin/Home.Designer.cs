@@ -84,6 +84,7 @@
             this.Controls.Add(this.edit_button);
             this.Controls.Add(this.add_button);
             this.Controls.Add(this.Exit_button);
+            this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "Kalkulator roboczogodzin";
             this.Load += new System.EventHandler(this.Home_Load);

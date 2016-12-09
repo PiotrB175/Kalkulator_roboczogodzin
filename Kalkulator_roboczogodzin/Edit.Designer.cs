@@ -180,6 +180,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.delete_button);
             this.Controls.Add(this.return_button);
+            this.MaximizeBox = false;
             this.Name = "Edit";
             this.Text = "Edit";
             this.Load += new System.EventHandler(this.Edit_Load);

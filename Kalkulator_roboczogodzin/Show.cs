@@ -42,6 +42,7 @@ namespace Kalkulator_roboczogodzin
                     dataGridView1.DataSource = db.Dodaj_zlecenie.ToList();
                 }
             }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

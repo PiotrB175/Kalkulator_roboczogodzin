@@ -303,6 +303,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.return_button);
+            this.MaximizeBox = false;
             this.Name = "Show";
             this.Text = "Show";
             this.Load += new System.EventHandler(this.Show_Load);
